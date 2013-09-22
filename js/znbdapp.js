@@ -30,6 +30,7 @@ function bodyControl ($scope) {
 			default:
 				loadPageHome();
 		}
+		 $("body").animate({scrollTop: top}, "slow");
 	}
 
 	loadPageHome = function(){
