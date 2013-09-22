@@ -1,0 +1,122 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	background-color: #FFF;
+	overflow: hidden;
+}
+
+
+.menustripe {
+	position: absolute;
+	top: 75px;
+	left: 0px;
+	font-size: 16pt;
+	line-height: 18pt;
+	width: 100%;
+	height: 70px;
+	background-color: #5E9CC5;
+	overflow: hidden;
+	z-index: 900033;
+	opacity: 0.3;
+}
+
+.bgdiv {
+	width: 1000px;
+	height: 1000px;
+	background-image: url('../img/znbd-tile5.gif');
+	background-repeat: repeat;
+	background-attachment: fixed;
+	z-index: -10000;
+}
+
+.btntest{
+	position: fixed;
+	left:300px;
+	top:100px;
+	z-index: 900038;
+}
+
+.btnmargin{
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.bgdiv2 {
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/znbd-tile-zoom1.png');
+	background-repeat: repeat;
+	z-index: -10000;
+}
+
+.container{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-image: url('../img/znbd-tile5.gif');
+	background-repeat: repeat;
+	background-attachment: fixed;
+	z-index: -20000;
+}
+
+.pagescontainer{
+	z-index: 89000;
+	width: 750px;
+		height: 550px;
+}
+
+.page{
+		position: absolute;
+		top:200px;
+		left:170px;
+		width: 700px;
+		height: 500px;
+		background-color: #FFF;
+		border: 1px #5E9CC5 solid; 
+
+		-moz-box-shadow: 0px 0px 10px #CCC;
+		-webkit-box-shadow: 3px 3px 5px #CCC;
+		box-shadow: 0px 0px 15px #999;
+
+		overflow:auto;
+
+}
+
+.pagecontent{
+	margin:20px;
+	
+}
+
+.logo{
+	position: absolute;
+	top:30px;
+	left:100px;
+	z-index: 90001;
+}
+
+.logocontainer{
+	z-index: 90000;
+	width: 250px;
+	height: 200px;
+}
+
+#news{
+	min-height: 105px;
+}
+
+#news:after {
+    content:"\a";
+    white-space: pre;
+}
+
+.portraitimg{
+	/*border: 1px solid #ccc;*/
+	float: left;
+	margin: 10px 20px 20px 0;
+}

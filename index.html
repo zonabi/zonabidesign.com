@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="znbdsite">
+<head>
+	<script type="text/javascript" src="lib/angular.1.2rc2.min.js"></script>
+    <!--<script type="text/javascript" src="lib/angular-route.min.js"></script>-->
+    <script type="text/javascript" src="lib/angular-animate.min.js"></script>
+    <script type="text/javascript" src="lib/easeljs-0.6.1.min.js"></script>
+    <script type="text/javascript" src="js/znbdapp.js"></script>
+    <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+   
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/znbd.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body ng-controller="bodyControl" id="scene">
+    <div class="layer" data-depth="0.00">
+        <div class="menustripe">
+        </div>
+    </div>
+
+    
+        <div class="btntest ">
+            <button class="btn {{currentPage!='about' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('about')"><i class="icon-white icon-leaf"></i> about</button>
+            <button class="btn {{currentPage!='work' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('work')"><i class="icon-white icon-picture"></i> work</button>
+            <button class="btn {{currentPage!='exp' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('exp')"><i class="icon-white icon-briefcase"></i> experience</button>
+            <button class="btn {{currentPage!='social' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('social')"><i class="icon-white icon-thumbs-up"></i> social</button>
+            <button class="btn {{currentPage!='contact' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('contact')"><i class="icon-white icon-envelope"></i> contact</button>
+        </div>
+  
+   
+
+   
+
+ 
+
+  
+            <div class="logocontainer layer" data-depth="0.30"><a href="#" ng-click="loadPage('home')"><img class="logo" src="img/znbdlogo-150x.png" /></a></div>
+
+   
+
+
+        <div class="pagescontainer layer" data-depth="0.00">
+            <div class="page">
+                <div class="pagecontent home layer" data-depth="0.00" ng-include src="'partials/home.html'" ng-show="currentPage=='home'">
+                    Here will go the first page's content. Yay.
+                </div>
+
+                <div class="pagecontent about layer" data-depth="0.00" ng-include src="'partials/about.html'" ng-show="currentPage=='about'">
+                    Here will go the first page's content. Yay.
+                </div>
+
+                <div class="pagecontent work layer" ng-include src="'partials/work.html'" data-depth="0.00" ng-show="currentPage=='work'">
+                  
+                </div>
+
+                <div class="pagecontent social layer" ng-include src="'partials/social.html'" data-depth="0.00" ng-show="currentPage=='social'">
+                </div>
+
+                <div class="pagecontent exp layer" data-depth="0.00" ng-include src="'partials/exp.html'" ng-show="currentPage=='exp'">
+                </div>
+
+                <div class="pagecontent contact layer" data-depth="0.00" ng-include src="'partials/contact.html'" ng-show="currentPage=='exp'">
+                </div>
+                
+            </div>
+        </div> 
+
+    
+
+ <div class="container layer" data-depth="0.10"> </div>
+    <!--<div class="bgdiv2 layer" data-depth="0.90" width="100%" height="100%"></div>-->
+
+    <script type="text/javascript" src="lib/parallax.js"></script>
+<script>
+var scene = document.getElementById('scene');
+var parallax = new Parallax(scene);
+
+</script>
+
+<script type='text/javascript'>
+    $(document).ready(function() {
+       // $('.carousel-control right').trigger('click');
+    //$('.carousel').carousel();
+    setTimeout(function(){$('.carousel').carousel();},1000);
+  });
+
+
+
+ </script>
+
+</body>
+</html>

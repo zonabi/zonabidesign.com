@@ -1,0 +1,38 @@
+/* When hiding an element */
+.ng-hide-add {
+  -webkit-transition:0.25s linear all;
+  -moz-transition:0.25s linear all;
+  -o-transition:0.25s linear all;
+  transition:0.25s linear all;
+  opacity:1;
+  left:100px;
+}
+.ng-hide-add.ng-hide-add-active {
+  opacity:0;
+  left:100px;
+}
+
+/* When showing an element */
+.ng-hide-remove {
+  -webkit-transition:0.25s linear all;
+  -moz-transition:0.25s linear all;
+  -o-transition:0.25s linear all;
+  transition:0.25s linear all;
+
+  -webkit-transition-delay:0.25s;
+  -moz-transition-delay:0.25s;
+  -o-transition-delay:0.25s;
+  transition-delay:0.25s;
+
+  /* this needs to be here to make it visible during the animation
+     since the .ng-hide class is already on the element rendering
+     it as hidden. */
+  display:block!important;
+  opacity:0;
+  left:10px;
+}
+
+.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
+  left:10px;
+}

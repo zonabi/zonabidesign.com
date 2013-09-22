@@ -1,0 +1,26 @@
+<h3>MolDraw Test. "Up And Atom!"</h3>
+
+<canvas class="moldrawcanvas" id="moldrawcanvas" ng-mousedown="mouseDownAction($event)" ng-mouseup="mouseUpAction($event)" ng-mousemove="mouseMoveAction($event)" width="600px" height="400px">
+Requires Browser that supports Canvas.
+</canvas>
+
+<br/>
+
+<!-- menu buttons -->
+<button class="{{currentTool=='atom' && 'btn btn-primary' || 'btn btn-info' }}" 
+		ng-click="switchTool('atom')">
+		<i class="icon-white icon-map-marker"></i>Atom
+</button>
+
+<button class="{{currentTool=='bond' && 'btn btn-primary' || 'btn btn-info' }}" ng-click="switchTool('bond')"><i class="icon-white icon-resize-horizontal"></i>Bond</button>
+
+<button class="{{currentTool=='ring' && 'btn btn-primary' || 'btn btn-info' }}" ng-click="switchTool('ring')"><i class="icon-white icon-cog"></i>Ring</button>
+
+<button class="{{currentTool=='erase' && 'btn btn-primary' || 'btn btn-info' }}" ng-click="switchTool('erase')"><i class="icon-white icon-remove"></i>Erase</button>
+
+<div class="nav-stacked menu">
+<div>Current Tool: {{currentTool}}</div>
+<div>Total Atoms: {{getTotalAtoms()}}</div>
+<div>Total Bonds: {{getTotalBonds()}}</div>
+<div>Total Rings:  {{getTotalRings()}}</div>
+</div>
