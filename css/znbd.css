@@ -24,15 +24,6 @@ body{
 	opacity: 0.3;
 }
 
-.bgdiv {
-	width: 1000px;
-	height: 1000px;
-	background-image: url('../img/znbd-tile5.gif');
-	background-repeat: repeat;
-	background-attachment: fixed;
-	z-index: -10000;
-}
-
 .btntest{
 	position: fixed;
 	left:300px;
@@ -41,16 +32,8 @@ body{
 }
 
 .btnmargin{
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
-.bgdiv2 {
-	width: 100%;
-	height: 100%;
-	background-image: url('../img/znbd-tile-zoom1.png');
-	background-repeat: repeat;
-	z-index: -10000;
+	margin-right: 3px;
+	margin-left: 3px;
 }
 
 .container{
