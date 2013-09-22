@@ -21,7 +21,7 @@ body{
 	background-color: #5E9CC5;
 	overflow: hidden;
 	z-index: 900033;
-	opacity: 0.3;
+	opacity: 0.0;
 	margin-bottom: 10px;
 }
 
@@ -36,7 +36,7 @@ body{
 }
 
 .btnmargin{
-	margin: 2px;
+	margin-top: 4px;
 }
 
 .container{
