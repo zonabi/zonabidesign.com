@@ -6,12 +6,12 @@ html {
 body{
 	height: 100%;
 	background-color: #FFF;
-	overflow: hidden;
+	overflow: auto;
 }
 
 
 .menustripe {
-	position: absolute;
+	position: fixed;
 	top: 75px;
 	left: 0px;
 	font-size: 16pt;
@@ -54,7 +54,7 @@ body{
 }
 
 .container{
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0px;
@@ -68,7 +68,8 @@ body{
 .pagescontainer{
 	z-index: 89000;
 	width: 750px;
-		height: 550px;
+	min-height: 550px;
+	margin-bottom: 20px;
 }
 
 .page{
@@ -76,7 +77,7 @@ body{
 		top:200px;
 		left:170px;
 		width: 700px;
-		height: 500px;
+		min-height: 500px;
 		background-color: #FFF;
 		border: 1px #5E9CC5 solid; 
 
@@ -94,14 +95,14 @@ body{
 }
 
 .logo{
-	position: absolute;
+	position: fixed;
 	top:30px;
 	left:100px;
-	z-index: 90001;
+	z-index: 900041;
 }
 
 .logocontainer{
-	z-index: 90000;
+	z-index: 900040;
 	width: 250px;
 	height: 200px;
 }
