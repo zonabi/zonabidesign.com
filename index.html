@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="znbdsite">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<script type="text/javascript" src="lib/angular.1.2rc2.min.js"></script>
     <!--<script type="text/javascript" src="lib/angular-route.min.js"></script>-->
     <script type="text/javascript" src="lib/angular-animate.min.js"></script>
@@ -9,22 +11,22 @@
     <script type="text/javascript" src="lib/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-
-   
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/znbd.css">
+	<link rel="stylesheet" media="(min-width: 1px) and (max-width: 800px)" href="css/znbd-mobile.css">
+    <link rel="stylesheet" media="(min-width:801px)" href="css/znbd.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
 <body ng-controller="bodyControl" id="scene">
+
+    <div class="logocontainer layer" data-depth="0.30"><a href="#" ng-click="loadPage('home')"><img class="logo" src="img/znbdlogo-150x.png" /></a></div>
+    
     <div class="layer" data-depth="0.00">
         <div class="menustripe">
         </div>
     </div>
 
-    
     <div class="btntest ">
         <button class="btn {{currentPage!='about' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('about')"><i class="icon-white icon-leaf"></i> about</button>
         <button class="btn {{currentPage!='work' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('work')"><i class="icon-white icon-picture"></i> work</button>
@@ -32,18 +34,8 @@
         <button class="btn {{currentPage!='social' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('social')"><i class="icon-white icon-thumbs-up"></i> social</button>
         <button class="btn {{currentPage!='contact' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('contact')"><i class="icon-white icon-envelope"></i> contact</button>
     </div>
-  
-   
 
-   
-
- 
-
-  
-    <div class="logocontainer layer" data-depth="0.30"><a href="#" ng-click="loadPage('home')"><img class="logo" src="img/znbdlogo-150x.png" /></a></div>
-
-   
-
+    
 
     <div class="pagescontainer layer" data-depth="0.00">
         <div class="page">
@@ -67,13 +59,8 @@
 
             <div class="pagecontent contact layer" data-depth="0.00" ng-include src="'partials/contact.html'" ng-show="currentPage=='exp'">
             </div>
-
-           
-            
         </div>
     </div> 
-
-    
 
     <div class="container layer" data-depth="0.10"> </div>
     <!--<div class="bgdiv2 layer" data-depth="0.90" width="100%" height="100%"></div>-->
@@ -84,8 +71,6 @@
         //var parallax = new Parallax(scene);
 
         $(document).ready(function() {
-           // $('.carousel-control right').trigger('click');
-            //$('.carousel').carousel();
             setTimeout(function(){$('.carousel').carousel();},1000);
         });
 
