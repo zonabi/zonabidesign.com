@@ -11,13 +11,13 @@ body{
 
 
 .menustripe {
-	position: fixed;
+	/*position: fixed;*/
 	top: 30px;
 	left: 0px;
 	font-size: 16pt;
 	line-height: 18pt;
 	width: 100%;
-	height: 30px;
+	height: 10px;
 	background-color: #5E9CC5;
 	overflow: hidden;
 	z-index: 900033;
@@ -32,6 +32,7 @@ body{
 	top:100px;*/
 	z-index: 900038;
 	/*float: right;*/
+	margin-top: 10px;
 }
 
 .btnmargin{
@@ -87,6 +88,7 @@ body{
 	z-index: 900040;
 	width: 100px;
 	height: 100px;
+	float: left;
 }
 
 #news{

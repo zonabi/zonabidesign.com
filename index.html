@@ -20,20 +20,26 @@
 </head>
 <body ng-controller="bodyControl" id="scene">
 
-    <div class="logocontainer layer" data-depth="0.30"><a href="#" ng-click="loadPage('home')"><img class="logo" src="img/znbdlogo-150x.png" /></a></div>
-    
-    <div class="layer" data-depth="0.00">
+
+
+    <div class="topbar layer" data-depth="0.00">
+        <div class="logocontainer layer" data-depth="0.30"><a href="#" ng-click="loadPage('home')"><img class="logo" src="img/znbdlogo-150x.png" /></a></div>
+
+        <div class="btntest ">
+            <button class="btn {{currentPage!='about' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('about')"><i class="icon-white icon-leaf"></i> about</button>
+            <button class="btn {{currentPage!='work' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('work')"><i class="icon-white icon-picture"></i> work</button>
+            <button class="btn {{currentPage!='exp' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('exp')"><i class="icon-white icon-briefcase"></i> experience</button>
+            <button class="btn {{currentPage!='social' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('social')"><i class="icon-white icon-thumbs-up"></i> social</button>
+            <button class="btn {{currentPage!='contact' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('contact')"><i class="icon-white icon-envelope"></i> contact</button>
+        </div>
+
         <div class="menustripe">
         </div>
+
+        
     </div>
 
-    <div class="btntest ">
-        <button class="btn {{currentPage!='about' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('about')"><i class="icon-white icon-leaf"></i> about</button>
-        <button class="btn {{currentPage!='work' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('work')"><i class="icon-white icon-picture"></i> work</button>
-        <button class="btn {{currentPage!='exp' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('exp')"><i class="icon-white icon-briefcase"></i> experience</button>
-        <button class="btn {{currentPage!='social' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('social')"><i class="icon-white icon-thumbs-up"></i> social</button>
-        <button class="btn {{currentPage!='contact' && 'btn-info' || 'btn-primary' }}" ng-click="loadPage('contact')"><i class="icon-white icon-envelope"></i> contact</button>
-    </div>
+    
 
     
 
