@@ -2,7 +2,6 @@ var znbdsite = angular.module('znbdsite', ['ngAnimate']);
 
 function bodyControl ($scope, $location) {
 	
-
 	$scope.location = $location;
 	$scope.$watch('location.search()', function() {
 		$scope.target = ($location.search()).target;
@@ -12,11 +11,7 @@ function bodyControl ($scope, $location) {
 		$location.search('target', name);
 	};
 
-	console.log("bodycontrol location", $scope.location.$$url);
-
 	$scope.currentPage = 'home';
-
-	
 
 	$scope.loadPage = function($page){
 		switch($page){
@@ -47,27 +42,27 @@ function bodyControl ($scope, $location) {
 	loadPageHome = function(){
 		$scope.currentPage = "home";
 		$scope.changeTarget("home");
+		setTimeout(function(){$('.carousel').carousel();},1000);
 	};
 	loadPageAbout = function(){
 		$scope.currentPage = "about";
 		$scope.changeTarget("about");
 	};
 	loadPageWork = function(){
-		console.log("loadPageWork");
 		$scope.currentPage = "work";
 		$scope.changeTarget("work");
 	};
 	loadPageExp = function(){
-		console.log("loadPageExp");
 		$scope.currentPage = "exp";
+		$scope.changeTarget("exp");
 	};
 	loadPageSocial = function(){
-		console.log("loadPageSoc");
 		$scope.currentPage = "social";
+		$scope.changeTarget("social");
 	};
 	loadPageContact = function(){
-		console.log("loadPageContact");
 		$scope.currentPage = "contact";
+		$scope.changeTarget("contact");
 	};
 
 	hideAllPages = function(){

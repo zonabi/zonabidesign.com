@@ -104,3 +104,7 @@ body{
 	float: left;
 	margin: 10px 20px 20px 0;
 }
+
+.zlabel{
+	min-width: 30pt;
+}
